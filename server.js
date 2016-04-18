@@ -4,7 +4,11 @@ var express = require('express');
 var app = express();
 
 app.get('/', function(req, res) {
+    console.log("hello from B");
     res.send('Hello from service B running on ' + os.hostname());
 });
 
-app.listen(process.env.PORT || 3000);
+var port = process.env.PORT || 3000;
+app.listen(port, function() {
+    console.log("Listening on port " + port);
+});
