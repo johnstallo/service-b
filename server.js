@@ -4,7 +4,6 @@ var express = require('express');
 var app = express();
 
 app.get('/', function(req, res) {
-    console.log("hello from B");
     res.send('Hello from service B running on ' + os.hostname());
 });
 
